@@ -1,0 +1,11 @@
+services:
+  openvpn-client:
+    image: medlion/openvpn-client
+    container_name: openvpn-client
+    volumes:
+      - /local/path/to/config.ovpn:/config/config.ovpn
+      - /local/path/to/pass.txt:/config/pass.txt
+    cap_add: 
+      - NET_ADMIN
+    privileged: true
+bernard@Inky:~/docker
